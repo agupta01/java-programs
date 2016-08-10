@@ -16,11 +16,9 @@ public class GamePlay {
 			for (int t = 0; t < 2; t++)
 			{
 				System.out.println("Player: " + player[t].name);
-				player[1 - t].printOffenseGrid();	//TODO separate between players not working
+				player[t].printOffenseGrid();
 				System.out.println("_______________________________________\n");
 				player[t].printDefenseGrid();
-				System.out.println("_______________________________________\n");
-				player[1 - t].printDefenseGrid();
 				fireMissile(t);
 			}
 		}
