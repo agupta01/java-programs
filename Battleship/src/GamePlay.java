@@ -13,13 +13,23 @@ public class GamePlay {
 		
 		while (player[0].shipsLeft != 0 && player[1].shipsLeft != 0)
 		{
-			for (int t = 0; t < 2; t++)
+			int t = 0;
+			while (t < 2)
 			{
 				System.out.println("Player: " + player[t].name);
 				player[t].printOffenseGrid();
 				System.out.println("_______________________________________\n");
 				player[t].printDefenseGrid();
-				fireMissile(t);
+				fire(t);
+				
+				System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+						+ "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+						+ "Your turn is over. Please pass the device to your opponent."
+						+ "\nOpponent, press enter when you have the device.");
+				Scanner temp = new Scanner(System.in);
+				String gameEnter = temp.nextLine();
+				if (gameEnter.equals('\n') == false)
+					t++;
 			}
 		}
 	}
@@ -35,7 +45,7 @@ public class GamePlay {
 	}
 	
 	
-	public static void fireMissile(int turn) {
+	public static void fire(int turn) {
 		System.out.println("Enter shot:");
 		
 		System.out.print("X: ");

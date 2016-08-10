@@ -78,7 +78,7 @@ public class Player {
 		System.out.print("Y: ");
 		int tempX = holder.nextInt();
 		ships[i].shipX = tempX - 1;
-		
+
 		// Allow option to make ship vertical
 		System.out.print("Make vertical? (y/n): ");
 		String tempVert = holder.next();
@@ -145,11 +145,22 @@ public class Player {
 		}
 		
 		if (p == 0) {
-			System.out.println("\n\n\n\n\n\n\n\n\n\nYour ships are now locked. "
+			System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+					+ "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+					+ "Your ships are now locked. "
 					+ "Please pass the device to player 2.");
 		}else{
-			System.out.println("\n\n\n\n\n\n\n\n\n\nAll ships are now locked. "
-					+ "Please pass the device to player 1.");
+			System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+					+ "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+					+ "All ships are now locked. "
+					+ "Please pass the device to player 1."
+					+ "\nPlayer 1, hit enter to begin the game.");
+			
+			Scanner temp = new Scanner(System.in);
+			String gameEnter = temp.nextLine();
+			if (gameEnter.equals('\n') == false)
+				System.out.println("Let the game begin!");
+				
 		}
 	}
 	
